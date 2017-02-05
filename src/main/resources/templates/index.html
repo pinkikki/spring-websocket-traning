@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>ログイン</title>
+    <script type="text/javascript" src="/webjars/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/webjars/stomp-websocket/2.3.3/stomp.js"></script>
+    <link href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <form class="form-signin" method="post" th:action="@{/login}">
+      <h2 class="form-signin-heading">Sign in</h2>
+      <label for="inputUserName" class="sr-only">username</label>
+      <input type="text" name="username" id="inputUserName" class="form-control" placeholder="username"/>
+      <p/>
+      <label for="inputPassword" class="sr-only">password</label>
+      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="password"/>
+      <p/>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+  </div>
+</body>
+</html>

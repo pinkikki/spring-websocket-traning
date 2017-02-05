@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>チャット研修</title>
+    <script type="text/javascript" src="/webjars/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/webjars/stomp-websocket/2.3.3/stomp.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+    <link href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/socket.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2 class="form-chat-heding">chat</h2>
+    <select id="room" class="form-control">
+      <option value="" selected="selected">ルームを選択してください。</option>
+      <option value="1">ルーム1</option>
+      <option value="2">ルーム2</option>
+      <option value="3">ルーム3</option>
+      <option value="4">ルーム4</option>
+      <option value="5">ルーム5</option>
+    </select>
+    <p/>
+    <form id="form" class="form-chat" action="#">
+        <textarea id="message" class="form-control" placeholder="メッセージを入力してください。"></textarea>
+        <p/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">送信</button>
+        <p/>
+        <div id="messages"></div>
+    </form>
+  </div>
+</body>
+</html>
